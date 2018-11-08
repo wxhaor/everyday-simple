@@ -1,0 +1,46 @@
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: eved-manage
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: hao-config
+#      profile: dev
+#      # 当ConfigServer 的后端存储的是 Git 的时候，默认就是 master
+#      label: master
+
+# 配置日志
+logging:
+  #配置日志文件路径
+  path: C:\log\everyday-simple\${spring.application.name}\
+
+
+#pagehelper分页插件
+#pagehelper:
+#  helperDialect: mysql
+#  reasonable: true
+#  supportMethodsArguments: true
+#  params: count=countSql
+
+
+hao:
+  env-info:
+    env-name: dev
+    server-name: eved-manage
+  snowflake:
+    data-center-id: 2
+    worker-id: 1
+  privacy-mask:
+    aesKey: D/6ZGt4Lq/pcPbQ8O1q52A==
+
+
+

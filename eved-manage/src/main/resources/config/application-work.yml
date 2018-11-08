@@ -1,0 +1,48 @@
+spring:
+  # 配置中心
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        # 配置中心id
+#        service-id: hao-config
+#      # 配置环境
+#      profile: dev
+  # 数据库
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ms-hao?characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  # rabbitmq 配置：
+  rabbitmq:
+    host: 172.21.2.159   # 登录 Rabbitmq 后台管理页面地址为：http://localhost:15672
+    port: 5672
+    username: guest   # 默认账户
+    password: guest   # 默认密码
+
+# 配置日志
+logging:
+  #配置日志文件路径
+  path: C:\log\ms-hao\${spring.application.name}\
+  context-name: ${spring.application.name}
+  rolling-policy:
+    max-file-size: 100MB
+    max-history: 500
+    total-size-cap: 1GB
+
+
+
+# 自定义配置
+hao:
+  env-info:
+    env-name: local-work
+    server-name: eved-manage
+  snowflake:
+    data-center-id: 2
+    worker-id: 1
+  privacy-mask:
+    aesKey: D/6ZGt4Lq/pcPbQ8O1q52A==

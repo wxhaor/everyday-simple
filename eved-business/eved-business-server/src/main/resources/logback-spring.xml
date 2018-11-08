@@ -1,0 +1,32 @@
+<configuration>
+    <include resource="logback-base.xml"/>
+
+    <springProfile name="default">
+        <root level="DEBUG" additivity="false">
+            <appender-ref ref="console"/>
+            <appender-ref ref="info-file"/>
+            <appender-ref ref="warn-file"/>
+            <appender-ref ref="error-file"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="home">
+        <root level="DEBUG" additivity="false">
+            <appender-ref ref="console"/>
+            <appender-ref ref="info-file"/>
+            <appender-ref ref="warn-file"/>
+            <appender-ref ref="error-file"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="work">
+        <root level="DEBUG" additivity="false">
+            <appender-ref ref="console"/>
+            <appender-ref ref="info-file"/>
+            <appender-ref ref="warn-file"/>
+            <appender-ref ref="error-file"/>
+        </root>
+    </springProfile>
+
+
+</configuration>
