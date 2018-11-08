@@ -1,7 +1,7 @@
 package com.wxhao.eved.business.client.manager;
 
 
-import com.wxhao.eved.business.common.vo.AdminUserVO;
+import com.wxhao.eved.business.common.bo.AdminUserVO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

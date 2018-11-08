@@ -1,0 +1,31 @@
+spring:
+
+# rabbitmq 配置：
+  rabbitmq:
+    host: 192.168.31.101   # 登录 Rabbitmq 后台管理页面地址为：http://localhost:15672
+    port: 5672
+    username: guest   # 默认账户
+    password: guest   # 默认密码
+
+# 配置日志
+logging:
+  #配置日志文件路径
+  path: C:\log\ms-hao\${spring.application.name}\
+  context-name: ${spring.application.name}
+  rolling-policy:
+    max-file-size: 100MB
+    max-history: 500
+    total-size-cap: 1GB
+
+
+# 自定义配置
+hao:
+  env-info:
+    env-name: local-home
+    server-name: eved-app
+  snowflake:
+    data-center-id: 2
+    worker-id: 1
+  privacy-mask:
+    aesKey: D/6ZGt4Lq/pcPbQ8O1q52A==
+

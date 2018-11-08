@@ -52,20 +52,20 @@
                     password="root">
     </jdbcConnection>
 
-    <javaModelGenerator targetPackage="com.wxhao.hao.manage.server.po"
+    <javaModelGenerator targetPackage="com.wxhao.eved.business.server.po"
                         targetProject="src/main/generated">
         <!--<property name="rootClass" value="com.niiwoo.civet.starter.service.entity.BaseEntity"/>-->
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="com.wxhao.hao.manage.server.mapping"
+    <sqlMapGenerator targetPackage="com.wxhao.eved.business.server.mapping"
                      targetProject="src/main/generated"/>
 
-    <javaClientGenerator targetPackage="com.wxhao.hao.manage.server.mapper" type="XMLMAPPER"
+    <javaClientGenerator targetPackage="com.wxhao.eved.business.server.mapper" type="XMLMAPPER"
                          targetProject="src/main/generated"/>
 
     <!-- ========================================================================================================== -->
 
-    <table tableName="admin_user" domainObjectName="AdminUser"
+    <table tableName="mg_manager" domainObjectName="MgManager"
            enableCountByExample="false" enableUpdateByExample="false"
            enableDeleteByExample="false" enableSelectByExample="false"
            selectByExampleQueryId="false">

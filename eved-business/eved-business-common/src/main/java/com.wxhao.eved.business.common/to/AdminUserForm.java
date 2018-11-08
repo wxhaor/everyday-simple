@@ -1,4 +1,4 @@
-package com.wxhao.eved.business.common.from;
+package com.wxhao.eved.business.common.to;
 
 import lombok.Data;
 

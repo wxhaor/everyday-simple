@@ -1,4 +1,4 @@
-package com.wxhao.eved.business.common.vo;
+package com.wxhao.eved.business.common.bo;
 
 
 import com.wxhao.boot.api.pojo.BaseVO;

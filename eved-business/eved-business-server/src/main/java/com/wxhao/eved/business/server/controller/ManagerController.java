@@ -2,8 +2,8 @@ package com.wxhao.eved.business.server.controller;
 
 
 import com.wxhao.boot.base.utils.ConvertUtils;
-import com.wxhao.eved.business.common.from.AdminUserForm;
-import com.wxhao.eved.business.common.vo.AdminUserVO;
+import com.wxhao.eved.business.common.to.AdminUserForm;
+import com.wxhao.eved.business.common.bo.AdminUserVO;
 import com.wxhao.eved.business.server.po.AdminUser;
 import com.wxhao.eved.business.server.service.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
