@@ -1,0 +1,27 @@
+{
+  "runtimeLog": "D:/generate.logs",
+  "modules": [
+    {
+      "name": "trade",
+      
+      "entityPackageName": "com.hotel.dao.entity",
+
+      "templates": [
+        {
+          "templateFile": "templates/Entity.vm",
+          "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/po",
+          "packageName": "com.wxhao.eved.business.server.po",
+          "classPrefix": "",
+          "classSuffix": ""
+        },
+        {
+          "templateFile": "templates/mapperExt.vm",
+          "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/mapper",
+          "packageName": "com.wxhao.eved.business.server.mapper",
+          "classPrefix": "",
+          "classSuffix": "Mapper"
+        }
+      ]
+    }
+  ]
+}
