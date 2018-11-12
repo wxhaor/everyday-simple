@@ -1,11 +1,15 @@
 package $packageName;
 
 import $module.entityPackageName.$class.oriName;
+import com.wxhao.boot.mybatis.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 #set($tempSuperClassNameLength = $class.name.length() - 3)
 #set($tempSuperClassName = $class.name.substring(0, $tempSuperClassNameLength))
 /**
 * $class.comment
 */
-public interface $class.name extends $tempSuperClassName, Mapper<$class.oriName> {
+@Mapper
+public interface $class.name extends BaseMapper<$class.oriName> {
+
 }

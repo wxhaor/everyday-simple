@@ -1,7 +1,9 @@
 package $packageName;
 
 import lombok.Data;
-
+#foreach($import in $imports)
+$import
+#end
 import java.io.Serializable;
 
 @Data

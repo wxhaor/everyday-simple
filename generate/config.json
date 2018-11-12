@@ -4,22 +4,30 @@
     {
       "name": "trade",
       
-      "entityPackageName": "com.hotel.dao.entity",
+      "entityPackageName": "com.wxhao.eved.business.server.po",
 
       "templates": [
         {
-          "templateFile": "templates/Entity.vm",
+          "templateFile": "templates/PO.vm",
           "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/po",
           "packageName": "com.wxhao.eved.business.server.po",
           "classPrefix": "",
           "classSuffix": ""
         },
         {
-          "templateFile": "templates/mapperExt.vm",
+          "templateFile": "templates/Mapper.vm",
           "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/mapper",
           "packageName": "com.wxhao.eved.business.server.mapper",
           "classPrefix": "",
           "classSuffix": "Mapper"
+        },
+        {
+          "templateFile": "templates/MapperXml.vm",
+          "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/mapping",
+          "classPrefix": "",
+          "packageName": "com.wxhao.eved.business.server.mapper",
+          "classSuffix": "Mapper",
+          "fileExt": "xml"
         }
       ]
     }

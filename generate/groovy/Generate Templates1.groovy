@@ -104,6 +104,8 @@ def calcFields(imports, table) {
         fields += [[
                            name : javaName(col.getName(), false),
                            type : typeStr,
+                           dbType : spec,
+                           dbName:col.getName(),
                            comment: col.comment,
                            annos: ""]]
     }
