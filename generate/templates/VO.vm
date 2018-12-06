@@ -1,0 +1,21 @@
+package $packageName;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+#foreach($import in $imports)
+$import
+#end
+
+import java.io.Serializable;
+
+@Data
+@ApiModel("$class.comment")
+public class $class.name implements Serializable {
+    #foreach($field in $fields)
+
+    @ApiModelProperty(value = "$field.comment")
+    private $field.type $field.name;
+    #end
+
+}

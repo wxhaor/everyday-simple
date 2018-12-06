@@ -1,0 +1,22 @@
+package $packageName;
+
+import lombok.Data;
+
+import java.io.Serializable;
+
+#foreach($import in $imports)
+$import
+#end
+
+@Data
+@Table(name = "admin_user")
+public class $class.name implements Serializable {
+    #foreach($field in $fields)
+
+    /**
+     * $field.comment
+     */
+    private $field.type $field.name;
+    #end
+
+}

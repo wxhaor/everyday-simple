@@ -1,0 +1,20 @@
+package $packageName;
+
+import lombok.Data;
+#foreach($import in $imports)
+$import
+#end
+
+import java.io.Serializable;
+
+@Data
+public class $class.name implements Serializable {
+    #foreach($field in $fields)
+
+    /**
+     * $field.comment
+     */
+    private $field.type $field.name;
+    #end
+
+}
