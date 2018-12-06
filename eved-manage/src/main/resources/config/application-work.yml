@@ -8,16 +8,9 @@ spring:
 #        service-id: hao-config
 #      # 配置环境
 #      profile: dev
-  # 数据库
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/ms-hao?characterEncoding=utf-8&useSSL=false
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: root
-    # 使用druid数据源
-    type: com.alibaba.druid.pool.DruidDataSource
 
-  # rabbitmq 配置：
+
+# rabbitmq 配置：
   rabbitmq:
     host: 172.21.2.159   # 登录 Rabbitmq 后台管理页面地址为：http://localhost:15672
     port: 5672
