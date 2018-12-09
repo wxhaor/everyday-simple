@@ -6,8 +6,13 @@ import org.springframework.context.annotation.Configuration;
  * @author wxhao
  * @date 2018/3/21
  */
-//@Configuration
+@Configuration
 public class HaoManageConfig {
+
+//    @Bean
+//    public HaoMyBatis haoMyBatis() {
+//        return new HaoMyBatis();
+//    }
 
 //    @Value("${spring.redis.shiro.host}")
 //    private String host;

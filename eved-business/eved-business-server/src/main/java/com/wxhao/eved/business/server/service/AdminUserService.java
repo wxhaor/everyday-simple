@@ -1,3 +1,4 @@
+/*
 package com.wxhao.eved.business.server.service;
 
 
@@ -8,10 +9,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+*/
 /**
  * @author wxhao
  * @date 2018/3/22
- */
+ *//*
+
 @Service
 @Slf4j
 public class AdminUserService extends BaseService<AdminUser> {
@@ -66,3 +69,4 @@ public class AdminUserService extends BaseService<AdminUser> {
 //    }
 
 }
+*/
