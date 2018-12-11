@@ -18,7 +18,8 @@ spring:
 #      # 当ConfigServer 的后端存储的是 Git 的时候，默认就是 master
 #      label: master
 
-mybatis:
+#mybatis:
+mybatis-plus:
   mapper-locations: classpath:com/wxhao/eved/business/server/mapping/*
 
 # 配置日志

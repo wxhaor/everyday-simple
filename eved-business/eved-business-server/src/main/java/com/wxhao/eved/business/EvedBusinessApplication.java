@@ -1,6 +1,5 @@
 package com.wxhao.eved.business;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -14,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 @ComponentScan("com.wxhao")
 //@MapperScan(basePackages = {"com.wxhao.eved.business.server.mapper"})
-@MapperScan("com.wxhao.eved.business.server.mapper")
+
 public class EvedBusinessApplication {
 
     public static void main(String[] args) {

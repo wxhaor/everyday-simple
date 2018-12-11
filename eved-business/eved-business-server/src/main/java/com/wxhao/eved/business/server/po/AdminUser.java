@@ -1,67 +1,44 @@
-/*
 package com.wxhao.eved.business.server.po;
 
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.wxhao.boot.api.constant.TablePrefixConstant;
 import com.wxhao.boot.api.enums.SexEnum;
-import com.wxhao.boot.mybatis.po.BasePO;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import java.util.Date;
 
-*/
-/**
- * @author wxhao
- * @date 2018/3/22
- *//*
 
-@Entity
 @Data
-@Table(name = TablePrefixConstant.ADMIN + "admin_user")
-public class AdminUser extends BasePO {
+@TableName(TablePrefixConstant.ADMIN + "admin_user")
+public class AdminUser {
 
+    private Long id;
 
-    */
-/**
-     * 用户名
-     *//*
+    private Date createTime;
 
-    @Column(nullable = false)
+    private Date updateTime;
+
     private String username;
 
-    */
-/**
-     * 密码
-     *//*
 
-    @Column(nullable = false)
     private String password;
 
-    */
-/**
-     * 姓名
-     *//*
 
     private String name;
 
-    */
-/**
-     * 头像地址
-     *//*
 
     private String headImgUrl;
 
-    */
-/**
-     * 手机号
-     *//*
 
     private String mobileNo;
 
+    private Integer sex;
 
+    @TableField(exist = false)
+    @EnumValue
     private SexEnum sexEnum;
 
 }
-*/

@@ -1,4 +1,3 @@
-/*
 package com.wxhao.eved.business.server.controller;
 
 
@@ -14,31 +13,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-*/
-/**
- * @author wxhao
- * @date 2018/3/22
- *//*
 
 @RestController
 @RequestMapping("/adminUser")
 @Slf4j
 public class ManagerController {
-    @Autowired
-    private String test;
+
+//    @Autowired
+//    private String test;
 
     @Autowired
     private AdminUserService adminUserService;
 
-    @RequestMapping("/save")
-    public int save(@RequestBody AdminUserForm form) {
-        return adminUserService.save(ConvertUtils.convert(form, AdminUser.class));
-    }
-
+//    @RequestMapping("/save")
+//    public int save(@RequestBody AdminUserForm form) {
+//        return adminUserService.save(ConvertUtils.convert(form, AdminUser.class));
+//    }
+//
     @RequestMapping("/findOne/{id}")
     public AdminUserVO findOne(@PathVariable("id") Long id) {
-        AdminUser adminUser = adminUserService.findById(id);
-        log.info(test);
+        AdminUser adminUser = adminUserService.getById(id);
         return ConvertUtils.convert(adminUser, AdminUserVO.class);
     }
 
@@ -49,4 +43,3 @@ public class ManagerController {
     }
 
 }
-*/
