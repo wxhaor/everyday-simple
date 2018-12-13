@@ -36,6 +36,15 @@
 		</profile>
 	</profiles>
 
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<shiro.spring.version>1.4.0</shiro.spring.version>
+		<jwt.auth0.version>3.2.0</jwt.auth0.version>
+	</properties>
+
 	<dependencies>
 
 		<dependency>
@@ -49,6 +58,18 @@
 			<groupId>com.wxhao.boot</groupId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring-boot-web-starter</artifactId>
+			<version>${shiro.spring.version}</version>
+		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.auth0</groupId>-->
+			<!--<artifactId>java-jwt</artifactId>-->
+			<!--<version>${jwt.auth0.version}</version>-->
+		<!--</dependency>-->
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -65,6 +86,8 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+
+
 
 	</dependencies>
 
