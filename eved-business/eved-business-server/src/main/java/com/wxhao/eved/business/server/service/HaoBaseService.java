@@ -12,9 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class HaoBaseService<M extends HaoBaseMapper<T>, T> extends ServiceImpl<M, T> implements IService<T> {
 
-
     @Autowired
     private SnowflakeIdWorker idWorker;
+
 
 
 }

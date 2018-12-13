@@ -9,7 +9,6 @@ $import
 #end
 
 @Data
-@Table(name = "admin_user")
 public class $class.name implements Serializable {
     #foreach($field in $fields)
 

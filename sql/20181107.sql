@@ -7,3 +7,14 @@ CREATE TABLE `mg_manager` (
   `state` int(11) DEFAULT NULL COMMENT '状态',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='管理员'
+
+
+CREATE TABLE `app_user` (
+  `id` bigint(20) NOT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `username` varchar(128) DEFAULT NULL,
+  `password` varchar(128) DEFAULT NULL,
+  `mobile` varchar(128) DEFAULT NULL,
+  `email` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
