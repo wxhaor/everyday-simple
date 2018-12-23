@@ -1,21 +1,25 @@
-package $packageName;
+package $classPackage;
 
 import lombok.Data;
-
-import java.io.Serializable;
-
 #foreach($import in $imports)
 $import
 #end
 
+#if( !$null.isNull($tableComment) )
+/**
+ * $tableComment
+ */
+#end
 @Data
-public class $class.name implements Serializable {
-    #foreach($field in $fields)
+public class $className {
+#foreach($field in $fields)
 
+#if( !$null.isNull($field.comment) )
     /**
      * $field.comment
      */
+#end
     private $field.type $field.name;
-    #end
+#end
 
 }

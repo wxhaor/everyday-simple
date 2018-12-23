@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="$packageName.$class.name">
-    <resultMap id="BaseResultMap" type="$module.entityPackageName.$class.oriName">
+<mapper namespace="$module.projectBasePackage.$module.mapperPackage.$classFileName">
+    <resultMap id="BaseResultMap" type="$module.projectBasePackage.$module.entityPackage.$className">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        #foreach($field in $fields)
+#foreach($field in $fields)
         <result column="$field.dbName" jdbcType="$field.dbType" property="$field.name"/>
-        #end
+#end
     </resultMap>
     <sql id="Base_Column_List">
-        id#foreach($field in $fields)  ,$field.dbName #end
+        #foreach($field in $fields) #if(${velocityCount}!=1),#end $field.dbName #end
     </sql>
+
 </mapper>

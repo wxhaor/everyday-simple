@@ -1,31 +1,29 @@
 {
-  "runtimeLog": "D:/generate.logs",
+  "runtimeLog": "C:/log/generate.logs",
   "modules": [
     {
       "name": "trade",
-      
-      "entityPackageName": "com.wxhao.eved.business.server.po",
-
+      "missTablePrefix": "",
+      "entityPackage": "po",
+      "mapperPackage": "mapper",
+      "projectBasePackage": "com.wxhao.eved.business.server",
       "templates": [
         {
-          "templateFile": "templates/PO.vm",
-          "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/po",
-          "packageName": "com.wxhao.eved.business.server.po",
+          "templateFilePath": "templates/PO.vm",
+          "package": "po",
           "classPrefix": "",
           "classSuffix": ""
         },
         {
-          "templateFile": "templates/Mapper.vm",
-          "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/mapper",
-          "packageName": "com.wxhao.eved.business.server.mapper",
+          "templateFilePath": "templates/Mapper.vm",
+          "package": "mapper",
           "classPrefix": "",
           "classSuffix": "Mapper"
         },
         {
-          "templateFile": "templates/MapperXml.vm",
-          "targetPath": "eved-business/eved-business-server/src/main/java/com/wxhao/eved/business/server/mapping",
+          "templateFilePath": "templates/MapperXml.vm",
+          "package": "mapping",
           "classPrefix": "",
-          "packageName": "com.wxhao.eved.business.server.mapper",
           "classSuffix": "Mapper",
           "fileExt": "xml"
         }

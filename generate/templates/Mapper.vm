@@ -1,15 +1,14 @@
-package $packageName;
+package $classPackage;
 
-import $module.entityPackageName.$class.oriName;
 import com.wxhao.boot.mybatis.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import $module.projectBasePackage.$module.entityPackage.$className;
 
-#set($tempSuperClassNameLength = $class.name.length() - 3)
-#set($tempSuperClassName = $class.name.substring(0, $tempSuperClassNameLength))
+#if( !$null.isNull($tableComment) )
 /**
-* $class.comment
-*/
-@Mapper
-public interface $class.name extends BaseMapper<$class.oriName> {
+ * $tableComment
+ */
+#end
+public interface $classFileName extends HaoBaseMapper<$className> {
 
 }

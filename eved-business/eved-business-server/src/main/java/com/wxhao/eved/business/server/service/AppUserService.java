@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class AppUserService extends HaoBaseService<AppUserMapper, AppUser> {
 
-    public AppUser randSelectOne() {
-        return baseMapper.randSelectOne();
-    }
+
 
 }

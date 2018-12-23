@@ -33,10 +33,6 @@ public class AppUserController {
         redisTemplate.opsForValue().set("key1","value1");
     }
 
-    @RequestMapping("/randSelectOne")
-    public AdminUserVO randSelectOne() {
-        AdminUserVO adminUserVO = ConvertUtils.convert(appUserService.randSelectOne(), AdminUserVO.class);
-        return adminUserVO;
-    }
+
 
 }
