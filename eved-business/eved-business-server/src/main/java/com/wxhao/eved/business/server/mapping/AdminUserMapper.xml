@@ -3,13 +3,13 @@
 <mapper namespace="com.wxhao.eved.business.server.mapper.AdminUserMapper">
     <resultMap id="BaseResultMap" type="com.wxhao.eved.business.server.po.AdminUser">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="create_time" jdbcType="DATETIME" property="createTime"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
     </resultMap>
-
     <sql id="Base_Column_List">
-    id, create_time,  `password`, username
-  </sql>
+          id  , create_time  , username  , password
+    </sql>
 
     <select id="randSelectOne" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select

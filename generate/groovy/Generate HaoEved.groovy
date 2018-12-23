@@ -19,6 +19,20 @@ typeMapping = [
         (~/(?i)/)                         : "String"
 ]
 
+dbTypeMapping = [
+        (~/(?i)bigint/)   : "BIGINT",
+        (~/(?i)tinyint/)  : "TINYINT",
+        (~/(?i)int/)      : "INTEGER",
+        (~/(?i)float/)    : "FLOAT",
+        (~/(?i)double/)   : "DOUBLE",
+        (~/(?i)decimal/)  : "DECIMAL",
+        (~/(?i)timestamp/): "TIMESTAMP",
+        (~/(?i)datetime/) : "DATETIME",
+        (~/(?i)date/)     : "Date",
+        (~/(?i)time/)     : "Time",
+        (~/(?i)/)         : "VARCHAR"
+]
+
 importMapping = [
         BigDecimal: 'java.math.BigDecimal',
         Date      : 'java.util.Date',
@@ -108,16 +122,18 @@ def readConfig() {
  */
 def calcFields(imports, table) {
     DasUtil.getColumns(table).reduce([]) { fields, col ->
-        def spec = Case.LOWER.apply(col.getDataType().getSpecification())
+        def specification = col.getDataType().getSpecification()
+        def spec = Case.LOWER.apply(specification)
         def typeStr = typeMapping.find { p, t -> p.matcher(spec).find() }.value
         def importPackage = importMapping.find { p, t -> p == typeStr }
-        if(importPackage){
+        def dbType = dbTypeMapping.find { p, t -> p.matcher(spec).find() }.value
+        if (importPackage) {
             imports.add("import " + importPackage.value + ";")
         }
         fields += [[
                            name   : convertJavaName(col.getName(), false),
                            type   : typeStr,
-                           dbType : spec,
+                           dbType : dbType,
                            dbName : col.getName(),
                            comment: col.comment,
                            annos  : ""]]

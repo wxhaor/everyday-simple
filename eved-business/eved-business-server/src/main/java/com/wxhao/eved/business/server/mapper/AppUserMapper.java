@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2018/12/12
  */
 @Mapper
-public interface AppUserMapper extends HaoBaseMapper<AppUser>{
+public interface AppUserMapper extends HaoBaseMapper<AppUser> {
 
     AppUser randSelectOne();
 
