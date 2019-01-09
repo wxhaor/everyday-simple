@@ -3,7 +3,7 @@
 <mapper namespace="com.wxhao.eved.business.server.mapper.AdminUserMapper">
     <resultMap id="BaseResultMap" type="com.wxhao.eved.business.server.po.AdminUser">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="create_time" jdbcType="DATETIME" property="createTime"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
     </resultMap>

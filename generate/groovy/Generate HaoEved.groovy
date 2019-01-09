@@ -27,7 +27,7 @@ dbTypeMapping = [
         (~/(?i)double/)   : "DOUBLE",
         (~/(?i)decimal/)  : "DECIMAL",
         (~/(?i)timestamp/): "TIMESTAMP",
-        (~/(?i)datetime/) : "DATETIME",
+        (~/(?i)datetime/) : "TIMESTAMP",
         (~/(?i)date/)     : "Date",
         (~/(?i)time/)     : "Time",
         (~/(?i)/)         : "VARCHAR"
