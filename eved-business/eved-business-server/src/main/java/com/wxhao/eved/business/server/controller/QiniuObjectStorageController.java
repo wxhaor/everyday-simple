@@ -17,6 +17,10 @@ import java.io.InputStream;
 public class QiniuObjectStorageController {
 
 
+    /**
+     * 表单上传文件
+     * @param file
+     */
     @PostMapping("upload")
     public void upload(@RequestParam("file") MultipartFile file) {
         InputStream inputStream = null;
