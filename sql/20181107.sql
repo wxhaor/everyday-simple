@@ -6,7 +6,7 @@ CREATE TABLE `mg_manager` (
   `password` varchar(256) NOT NULL COMMENT '密码',
   `state` int(11) DEFAULT NULL COMMENT '状态',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='管理员'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='管理员' ;
 
 CREATE TABLE `app_user` (
   `id` bigint(20) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE `app_user` (
   `mobile` varchar(128) DEFAULT NULL,
   `email` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='app用户' ;
 
 -- 20190114
 

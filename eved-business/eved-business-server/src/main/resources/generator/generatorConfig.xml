@@ -47,7 +47,7 @@
     </commentGenerator>
 
     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                    connectionURL="jdbc:mysql://127.0.0.1:3306/ms-hao?characterEncoding=utf-8&amp;useSSL=false"
+                    connectionURL="jdbc:mysql://127.0.0.1:3306/everyday?characterEncoding=utf-8&amp;useSSL=false"
                     userId="root"
                     password="root">
     </jdbcConnection>
@@ -65,7 +65,7 @@
 
     <!-- ========================================================================================================== -->
 
-    <table tableName="mg_manager" domainObjectName="MgManager"
+    <table tableName="simple_event" domainObjectName="SimpleEvent"
            enableCountByExample="false" enableUpdateByExample="false"
            enableDeleteByExample="false" enableSelectByExample="false"
            selectByExampleQueryId="false">
