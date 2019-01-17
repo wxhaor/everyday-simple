@@ -12,8 +12,28 @@
     <sql id="Base_Column_List">
     id, create_time, update_time, user_id, content, event_date
     </sql>
+    <select id="pageCount" resultType="java.lang.Integer">
+        select count(0)
+        from simple_event
+        where 1 = 1
+        <include refid="page_where"/>
+    </select>
+    <select id="pageList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from simple_event
+        where 1 = 1
+        <include refid="page_where"/>
+    </select>
 
+    <sql id="page_where">
+        <if test="id != null">
+            and id = #{id}
+        </if>
+        <if test="content != null and content != '' ">
+            and content = #{content}
+        </if>
 
-
+    </sql>
 
 </mapper>

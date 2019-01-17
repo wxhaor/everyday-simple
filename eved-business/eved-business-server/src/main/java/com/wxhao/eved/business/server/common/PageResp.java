@@ -15,12 +15,21 @@ public class PageResp<T> implements Serializable {
     private int totalPage = 1;
     private List<T> items = new ArrayList<>();
 
-    public void measureTotalPage(int totalCount, int pageSize) {
-        this.totalCount = totalCount;
-        if (totalCount < 1) {
-            return;
-        }
-        this.totalPage = totalCount % pageSize == 0 ? totalCount / pageSize : totalCount / pageSize + 1;
+    private PageResp() {
     }
+
+    public static <T> PageResp<T> build(PageReq pageReq, List<T> items, Integer totalCount) {
+        PageResp<T> pageResp = new PageResp<>();
+        Integer pageSize = pageReq.getPageSize();
+        pageResp.setPageReq(pageReq);
+        pageResp.setTotalCount(totalCount);
+        if (totalCount > 0) {
+            pageResp.setTotalPage(totalCount % pageSize == 0 ? totalCount / pageSize : totalCount / pageSize + 1);
+        }
+        pageResp.setItems(items);
+        return pageResp;
+    }
+
+
 
 }
