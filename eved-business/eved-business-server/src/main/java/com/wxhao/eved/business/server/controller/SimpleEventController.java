@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
 @RequestMapping("/simpleEvent")
 @Slf4j
@@ -27,10 +29,13 @@ public class SimpleEventController {
     }
 
     @RequestMapping("/save")
-    public Boolean save(@RequestBody SimpleEventBO reqBO) {
+    public SimpleEvent save(@RequestBody SimpleEventBO reqBO) {
         SimpleEvent simpleEvent = ConvertUtils.convert(reqBO, SimpleEvent.class);
+        if(simpleEvent.getEventDate() == null){
+            simpleEvent.setEventDate(new Date());
+        }
         int to = 1;
-        return simpleEventService.save(simpleEvent);
+        return simpleEventService.saveAndFind(simpleEvent);
     }
 
 }

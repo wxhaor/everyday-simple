@@ -12,7 +12,7 @@ import java.util.Date;
  */
 
 @Data
-public abstract class BaseTimePO extends BaseIdPO{
+public abstract class BaseCreateTimePO extends BaseIdPO{
 
     /**
      * 创建时间

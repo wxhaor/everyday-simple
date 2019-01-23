@@ -6,7 +6,7 @@ import lombok.Data;
  * 管理员用户
  */
 @Data
-public class AdminUser extends BaseTimePO {
+public class AdminUser extends BaseCreateTimePO {
 
 
     /**

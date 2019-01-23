@@ -7,7 +7,7 @@ import java.util.Date;
  * 简单的事件记录
  */
 @Data
-public class SimpleEvent {
+public class SimpleEvent extends BaseUpdateTimePO{
 
     /**
      * 主键

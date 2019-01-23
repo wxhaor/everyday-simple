@@ -7,7 +7,7 @@ import lombok.Data;
  * @date 2018/12/12
  */
 @Data
-public class AppUser extends BaseTimePO {
+public class AppUser extends BaseCreateTimePO {
 
     private String username;
 
