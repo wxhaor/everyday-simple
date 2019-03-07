@@ -34,8 +34,7 @@ public class SimpleEventController {
         if(simpleEvent.getEventDate() == null){
             simpleEvent.setEventDate(new Date());
         }
-        int to = 1;
-        return simpleEventService.saveAndFind(simpleEvent);
+        return simpleEventService.saveGet(simpleEvent);
     }
 
 }

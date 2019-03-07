@@ -29,6 +29,17 @@ public class HaoBaseService<M extends HaoBaseMapper<T>, T> extends ServiceImpl<M
         return super.save(entity);
     }
 
+    @Transactional
+    public T saveGet(T entity) {
+        HaoBaseService<M, T> service = ApplicationContextHelper.getBean(this.getClass());
+        T initEntity = initEntity(entity);
+        boolean b = service.save(entity);
+        if (b) {
+            return initEntity;
+        }
+        return null;
+    }
+
     private T initEntity(T entity) {
         long id = idWorker.nextId();
         if (entity instanceof BaseUpdateTimePO) {
@@ -44,14 +55,4 @@ public class HaoBaseService<M extends HaoBaseMapper<T>, T> extends ServiceImpl<M
         return entity;
     }
 
-    @Transactional
-    public T saveAndFind(T entity) {
-        HaoBaseService<M, T> service = ApplicationContextHelper.getBean(this.getClass());
-        T initEntity = initEntity(entity);
-        boolean b = service.save(entity);
-        if (b) {
-            return initEntity;
-        }
-        return null;
-    }
 }

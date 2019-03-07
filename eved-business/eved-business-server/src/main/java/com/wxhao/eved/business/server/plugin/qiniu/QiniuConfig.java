@@ -6,6 +6,7 @@ import com.qiniu.storage.Configuration;
 import com.qiniu.util.Auth;
 import com.qiniu.util.StringMap;
 import com.wxhao.boot.base.helper.ApplicationContextHelper;
+import com.wxhao.eved.business.server.common.EnumUtils;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -134,19 +135,12 @@ public class QiniuConfig {
     public static Configuration getConfiguration() {
         QiniuConfigProperties configProperties = ApplicationContextHelper.getBean(QiniuConfigProperties.class);
         String zoneName = configProperties.getZoneName();
-        ZoneEnum zoneEnum = getEnum(ZoneEnum.class, objEnum -> objEnum.getName().equals(zoneName));
+        ZoneEnum zoneEnum = EnumUtils.getEnum(ZoneEnum.class, objEnum -> objEnum.getName().equals(zoneName));
         Configuration cfg = new Configuration(zoneEnum.getZone());
         return cfg;
     }
 
-    public static <T extends Enum> T getEnum(Class<T> enumClass, Function<T, Boolean> function) {
-        for (T iEnum : enumClass.getEnumConstants()) {
-            if (function.apply(iEnum)) {
-                return iEnum;
-            }
-        }
-        return null;
-    }
+
 
     @AllArgsConstructor
     @Getter

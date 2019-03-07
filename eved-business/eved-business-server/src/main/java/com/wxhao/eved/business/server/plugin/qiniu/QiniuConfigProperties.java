@@ -11,4 +11,6 @@ public class QiniuConfigProperties {
     String secretKey = "EJUyk3em0gEPIWlNFqJ0KrqJcUf8PXY2SKTqHQoh";
     String bucket = "everyday";
     String zoneName = "z2";
+
+    String urlPrefix = "http://img-everyday.wxhaor.com/";
 }

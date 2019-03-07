@@ -10,12 +10,30 @@ import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 
 /**
- * VO->DTO转换工具类
+ * 转换工具类
  *
  * @author lile
  */
 @Slf4j
 public abstract class ConvertUtils {
+
+    /**
+     * 转换单个对象
+     *
+     * @param source      源对象
+     * @param targetClass 目标类型
+     * @param <S>         源类型
+     * @param <T>         目标类型
+     * @return 目标对象
+     */
+    public static <S, T> T convert(S source, Class<T> targetClass) {
+        if (source == null) {
+            return null;
+        }
+        T target = newInstance(targetClass);
+
+        return copyProperties(source, target);
+    }
 
     /**
      * 转换对象列表
@@ -53,23 +71,6 @@ public abstract class ConvertUtils {
         return targetList;
     }
 
-    /**
-     * 转换单个对象
-     *
-     * @param source      源对象
-     * @param targetClass 目标类型
-     * @param <S>         源类型
-     * @param <T>         目标类型
-     * @return 目标对象
-     */
-    public static <S, T> T convert(S source, Class<T> targetClass) {
-        if (source == null) {
-            return null;
-        }
-        T target = newInstance(targetClass);
-
-        return copyProperties(source, target);
-    }
 
     /**
      * 复制属性， 采用Spring BeanUtils
