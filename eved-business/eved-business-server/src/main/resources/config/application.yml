@@ -13,6 +13,7 @@ logging:
     max-history: 500
     total-size-cap: 1GB
 
+
 # 自定义配置
 hao:
   env-info:
@@ -23,3 +24,9 @@ hao:
     worker-id: 1
   privacy-mask:
     aesKey: D/6ZGt4Lq/pcPbQ8O1q52A==
+
+qn:
+  access-key:
+  secretKey:
+  bucket:
+  zoneName:

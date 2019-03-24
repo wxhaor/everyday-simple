@@ -1,16 +1,18 @@
 package com.wxhao.eved.business.server.plugin.qiniu;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
+@ConfigurationProperties("qn")
 public class QiniuConfigProperties {
 
-    String accessKey = "ae3GNnCaMIdcdDcf2PGthTEWSQw4O5eSX3CUkgnt";
-    String secretKey = "EJUyk3em0gEPIWlNFqJ0KrqJcUf8PXY2SKTqHQoh";
-    String bucket = "everyday";
-    String zoneName = "z2";
+    String accessKey = "";
+    String secretKey = "";
+    String bucket = "";
+    String zoneName = "";
 
     String urlPrefix = "http://img-everyday.wxhaor.com/";
 }

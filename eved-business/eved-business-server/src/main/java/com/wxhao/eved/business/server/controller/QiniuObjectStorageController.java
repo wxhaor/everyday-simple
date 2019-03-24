@@ -26,19 +26,22 @@ public class QiniuObjectStorageController {
      *
      * @param file
      */
-    @PostMapping("upload")
-    public String upload(@RequestParam("file") MultipartFile file) {
-        InputStream inputStream = null;
-        StringBuilder url = new StringBuilder();
-        try {
-            inputStream = file.getInputStream();
-            DefaultPutRet defaultPutRet = QiniuUploadManageHelper.simpleUpload(inputStream);
-            log.info("QiniuObjectStorageController#upload#defaultPutRet:{}", JsonUtils.toJson(defaultPutRet));
-            url.append(qiniuConfigProperties.getUrlPrefix());
-            url.append(defaultPutRet.key);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return url.toString();
-    }
+//    @PostMapping("upload")
+//    public String upload(@RequestParam("file") MultipartFile file , String name) {
+//        InputStream inputStream = null;
+//        StringBuilder url = new StringBuilder();
+//        log.info("QiniuObjectStorageController#upload#name:{}", name);
+//        log.info("QiniuObjectStorageController#upload#file.getName():{}", file.getName());
+//        try {
+//            inputStream = file.getInputStream();
+//            file.getName();
+//            DefaultPutRet defaultPutRet = QiniuUploadManageHelper.simpleUpload(inputStream);
+//            log.info("上传成功-QiniuObjectStorageController#upload#defaultPutRet:{}", JsonUtils.toJson(defaultPutRet));
+//            url.append(qiniuConfigProperties.getUrlPrefix());
+//            url.append(defaultPutRet.key);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return url.toString();
+//    }
 }
